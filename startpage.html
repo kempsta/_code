@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>.newtab &gt; </title>
+  <style>
+    html {
+      align-items: center;
+	  background-color: #191b1c;
+      color: #c5c8c6;
+      display: flex;
+	  font: 22px/1 "Inconsolata", monospace;
+      height: 100%;
+      justify-content: center;
+    }
+	body {
+      background-color: #1d1f21;
+      border-radius: 3px;
+      box-shadow: 1px 1px 6px #00000087;
+	  color: #c5c8c6;
+      display: flex;
+      flex-direction: column;
+      min-height: 20ch;
+      min-width: 50vw;
+      padding: 2em;
+    }
+    p {
+      margin: 0;
+    }
+    p span {
+      color: #b5bd68;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+	a:focus,
+    a:hover {
+      font-weight: bold;
+    }
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    nav {
+      column-gap: 2em;
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      padding: 1em 0;
+    }
+	ul:nth-child(5n + 1) li:first-child {
+      color: #a54242;
+    }
+    ul:nth-child(5n + 2) li:first-child {
+      color: #de935f;
+    }
+    ul:nth-child(5n + 3) li:first-child {
+      color: #f0c674;
+    }
+    ul:nth-child(5n + 4) li:first-child {
+      color: #8c9440;
+    }
+    ul:nth-child(5n + 5) li:first-child {
+      color: #85678f;
+    }
+    li:first-child {
+      font-weight: bold;
+    }
+    li:last-child {
+      margin: 0 0 1em;
+    }
+	p #cursor {
+      background-color: #b5bd68;
+      animation: blink 2s infinite;
+    }
+    @keyframes blink {
+      0% { opacity: 0; }
+      49% { opacity: 0; }
+      50% { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <p><span>kempy@zorrodelfuego &gt; </span>ls ~/.newtab</p>
+  <nav>
+    <ul>
+      <li>general.7z</li>
+	  <li><a href="https://www.google.com/">goo.gl</a></li>
+	  <li><a href="https://mail.google.com/">gmail.png</a></li>
+	  <li><a href="https://www.reddit.com/">redd.aif</a></li>
+      <li><a href="https://www.4chan.org/">chan.html</a></li>
+      <li><a href="https://www.github.com/">thehub.git</a></li>
+      <li><a href="https://www.stackoverflow.com/">stackover.doc</a></li>
+	  <li><a href="https://qaz.wtf/u/convert.cgi">unicod.class</a></li>
+    </ul>
+	<ul>
+	  <li>media.tar.gz</li>
+	  <li><a href="https://www.youtube.com/">utube.css</a></li></li>
+	  <li><a href="https://www.twitch.tv/">twitch.tv</a></li>
+	  <li><a href="https://www.soundcloud.com/">scloud.sh</a></li>
+	  <li><a href="https://www.hulu.com/">hulu.iso</a></li>
+	  <li><a href="https://www.netflix.com/">netfl.xml</a></li>
+    <li><a href="https://www.npr.org/">npr.otf</a></li>
+    <li><a href="https://yande.re/">yandere.webm</a></li>
+	</ul>
+	<ul>
+	  <li>education.pkg</li>
+	  <li><a href="https://my.uvu.edu/">uvu.edu</a></li></li>
+	  <li><a href="https://uvu.instructure.com/">canvas.psd</a></li>
+	  <li><a href="https://www.uvu.edu/library/">library.py</a></li>
+	  <li><a href="https://newconnect.mheducation.com/">comm.txt</a></li>
+	  <li><a href="https://bookshelf.vitalsource.com/#/books/9781643860022/cfi/0">handbook.pdf</a></li>
+	  <li><a href="https://docs.google.com/document/d/1mQhMGz6SeDPXJjkNcO8FuNsTaA6Q5McAxTw6VqQ1dPs/">larp.js</a></li>
+	</ul>
+  </nav>
+  <p><span>kempy@zorrodelfuego &gt; </span> <span id="cursor">_</span></p>
+</body>
+</html>
