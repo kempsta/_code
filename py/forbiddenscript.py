@@ -1,5 +1,5 @@
 # Very dangerous, not for use without parental supervision.
-
+#!/usr/bin/env python
 import time
 
 def hacker():
