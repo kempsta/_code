@@ -1,20 +1,35 @@
 # Very dangerous, not for use without parental supervision.
 #!/usr/bin/env python
 import time
+target=[]
 
 def hacker():
-    print("\nHacking..\n")
+    print("\nHacking..")
     time.sleep(.500)
-    print("\t",target,"28% hacked.", end='\r')
+    print(target[-1],"28% hacked.", end='\r')
     time.sleep(.900)
-    print("\t",target,"61% hacked.", end='\r')
+    print(target[-1],"61% hacked.", end='\r')
     time.sleep(.400)
-    print("\t",target,"72% hacked.", end='\r')
+    print(target[-1],"72% hacked.", end='\r')
     time.sleep(2)
-    print("\t",target,"100% hacked.")
-    print("\nHack successful. (took 3.8 seconds)")
-    print(target, "has been pwned.")
+    print(target[-1],"100% hacked.")
+    print("Hack successful.")
 
-print("Who do you want to hack?")
-target = input()
+print("\nWho do you want to hack?")
+target.append(input())
 hacker()
+
+while True:
+    try:
+        print("\nWho else do you want to hack? (Leave blank for none)")
+        target.append(input())
+        if target[-1] != "":
+            hacker()
+        else:
+            break
+    except:
+        break
+
+print("Thank you for hacking today.")
+print("You have successfully pwned",len(target)-1,"people.")
+print("Have a nice day!")
