@@ -2,7 +2,11 @@
 # Very dangerous, not for use without parental supervision.
 
 import time
+import re
+from random import randint
+
 target=[]
+
 class bcolors:
     HEADER = '\033[95m'
     OKBLUE = '\033[94m'
@@ -15,7 +19,7 @@ class bcolors:
     UNDERLINE = '\033[4m'
 
 def splashscreen():
-    for i in range(1,15):
+    for i in range(1,5):
         time.sleep(.020)
         print("")
     time.sleep(.200)
@@ -70,6 +74,7 @@ def splashscreen():
     time.sleep(.300)
     try:
         target.append(input(bcolors.FAIL+"Awaiting target... > "+bcolors.OKCYAN))
+        target[-1]=re.sub("[^0-9a-zA-Z .]","",target[-1])[0:50]
     except:
         exit()
 
@@ -78,7 +83,7 @@ def credits():
     print("You have successfully hacked",len(target)-1,"people!")
     print(bcolors.OKCYAN+"\nHave a nice day!"+bcolors.ENDC)
     time.sleep(0.950)
-    for i in range(1,10):
+    for i in range(1,5):
         print("")
         time.sleep(0.020)
 
@@ -86,17 +91,26 @@ def hacker():
     try:
         print(bcolors.ENDC+"\nHacking..")
         time.sleep(.500)
-        print(bcolors.WARNING+target[-1],"28% hacked.", end='\r')
-        time.sleep(.900)
-        print(target[-1],"61% hacked.", end='\r')
-        time.sleep(.400)
-        print(target[-1],"72% hacked.", end='\r')
-        time.sleep(1.700)
+        total=randint(2000,4000)
+        iteration=0
+        perc=0
+        while iteration < total:
+            perc=(100*(iteration/total))
+            print(bcolors.WARNING+"{} {:.1f}% hacked.".format(target[-1],perc),end="\r")
+            sleeptime=randint(200,1200)
+            if (iteration+sleeptime>total):
+                sleeptime=total-iteration
+            iteration=iteration+sleeptime
+            time.sleep(sleeptime/1000)
         print(bcolors.OKGREEN+target[-1],"100% hacked.")
         time.sleep(.200)
         print(bcolors.ENDC+"Hack successful.")
         time.sleep(1.0)
-    except:
+    except Exception as ex: 
+        print(ex)
+        print("Unhandled Exception.")
+        for i in range (1,5):
+            print("")
         exit()
 
 def hackdos():
@@ -105,13 +119,13 @@ def hackdos():
             print("\nWho else do you want to hack? (Leave blank for none)")
             time.sleep(.300)
             target.append(input(bcolors.FAIL+"Awaiting target... > "+bcolors.OKCYAN))
+            target[-1]=re.sub("[^0-9a-zA-Z .]","",target[-1])[0:50]
             if target[-1] != "":
                 hacker()
             else:
                 break
         except:
             break
-
 
 def main():
     splashscreen()
