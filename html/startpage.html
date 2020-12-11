@@ -1,27 +1,24 @@
-<!--
-LIGHTWEIGHT HTML CONSOLE LOOKALIKE TAB PAGE
-CUSTOMISABLE WITH LINKS, SUPPORTS COLOURED TABS
---> 
-
 <!DOCTYPE html>
+<!--  IDEA FROM /wg/ 
+      https://stpg.tk/  -->
 <html>
 <head>
   <title>.newtab &gt; </title>
   <style>
     html {
       align-items: center;
-	    background-color: #191b1c;
+	  background-color: #191b1c;
       color: #c5c8c6;
-      display: flex;
-	    font: 22px/1 "Inconsolata", monospace;
+      display: flex; 
+	  font: 18px/1 monospace; /* CHANGE FONT SIZE HERE */
       height: 100%;
       justify-content: center;
     }
-	  body {
+	body {
       background-color: #1d1f21;
       border-radius: 3px;
-      box-shadow: 1px 1px 6px #00000087;
-	    color: #c5c8c6;
+      box-shadow: 2px 2px 6px #00000087;
+	  color: #c5c8c6;
       display: flex;
       flex-direction: column;
       min-height: 20ch;
@@ -38,7 +35,7 @@ CUSTOMISABLE WITH LINKS, SUPPORTS COLOURED TABS
       color: inherit;
       text-decoration: none;
     }
-	  a:focus,
+	a:focus,
     a:hover {
       font-weight: bold;
     }
@@ -53,7 +50,7 @@ CUSTOMISABLE WITH LINKS, SUPPORTS COLOURED TABS
       grid-template-columns: auto auto auto auto;
       padding: 1em 0;
     }
-	  ul:nth-child(5n + 1) li:first-child {
+	ul:nth-child(5n + 1) li:first-child {
       color: #a54242;
     }
     ul:nth-child(5n + 2) li:first-child {
@@ -69,13 +66,13 @@ CUSTOMISABLE WITH LINKS, SUPPORTS COLOURED TABS
       color: #85678f;
     }
     li:first-child {
-      font-weight: bold;
+	  margin: 0 0 0px;
     }
     li:last-child {
       margin: 0 0 1em;
     }
-	  p #cursor {
-      background-color: #b5bd68;
+	p #cursor {
+      background-color: #c5c8c6;
       animation: blink 2s infinite;
     }
     @keyframes blink {
@@ -86,17 +83,17 @@ CUSTOMISABLE WITH LINKS, SUPPORTS COLOURED TABS
   </style>
 </head>
 <body>
-  <p><span>user@place &gt; </span>ls ~/.newtab</p>
+  <p><span>user@browser &gt; </span>ls ~/.newtab</p>
   <nav>
     <ul>
-      <li>general.7z</li>
-	    <li><a href="https://www.google.com/">goo.gl</a></li>
-	    <li><a href="https://mail.google.com/">gmail.png</a></li>
-	    <li><a href="https://www.reddit.com/">redd.aif</a></li>
-      <li><a href="https://www.github.com/">thehub.git</a></li>
-      <li><a href="https://www.stackoverflow.com/">stackover.doc</a></li>
+      <li>general.7z</li> <!-- YOUR TABS HERE, SUPPORTS UP TO FIVE TABS -->
+	  <li><a href="https://www.google.com/">googl.html</a></li>
+	  <li><a href="https://mail.google.com/">mail.html</a></li>
+	  <li><a href="https://www.reddit.com/">redit.html</a></li>
+	  <li><a href="https://www.twitter.com/">twitr.html</a></li>
+    <li><a href="https://www.github.com/">git.html</a></li>
     </ul>
   </nav>
-  <p><span>user@place &gt; </span> <span id="cursor">_</span></p>
+  <p><span>user@browser &gt; </span> <span id="cursor">_</span></p>
 </body>
 </html>
