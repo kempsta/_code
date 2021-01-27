@@ -91,13 +91,13 @@ def hacker():
     try:
         print(bcolors.ENDC+"\nHacking..")
         time.sleep(.500)
-        total=randint(2000,4000)
+        total=randint(2000,5000)
         iteration=0
         perc=0
         while iteration < total:
             perc=(100*(iteration/total))
             print(bcolors.WARNING+"{} {:.1f}% hacked.".format(target[-1],perc),end="\r")
-            sleeptime=randint(200,1200)
+            sleeptime=randint(200,1050)
             if (iteration+sleeptime>total):
                 sleeptime=total-iteration
             iteration=iteration+sleeptime
